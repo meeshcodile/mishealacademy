@@ -1,0 +1,94 @@
+<!-- Header -->
+<div class="header  pb-8 pt-5 pt-md-8" style="background: #f58634">
+    <div class="container-fluid">
+        <div class="header-body">
+            <!-- Card stats -->
+            <div class="row">
+                <div class="col-sm-3 col-lg-6">
+                    <div class="card card-stats mb-4 mb-xl-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Total Interns</h5>
+                                    <span class="h2 font-weight-bold mb-0 counter">{{totalInternsRegistered}}</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0 text-muted text-sm">
+                                <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                                <span class="text-nowrap">Since last month</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-lg-6" >
+                    <div class="card card-stats mb-4 mb-xl-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Total Internship Application</h5>
+                                    <span class="h2 font-weight-bold mb-0 counter">{{totalInterns}}</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0 text-muted text-sm">
+                                <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 3.48%</span>
+                                <span class="text-nowrap">Since last month</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-lg-6" style="margin-top: 10px">
+                    <div class="card card-stats mb-4 mb-xl-0">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col">
+                                    <h5 class="card-title text-uppercase text-muted mb-0">Total Students</h5>
+                                    <span class="h2 font-weight-bold mb-0">{{totalStudents}}</span>
+                                </div>
+                                <div class="col-auto">
+                                    <div class="icon icon-shape bg-warning text-white rounded-circle shadow">
+                                        <i class="fas fa-chart-pie"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="mt-3 mb-0 text-muted text-sm">
+                                <span class="text-danger mr-2"><i class="fas fa-arrow-down"></i> 3.48%</span>
+                                <span class="text-nowrap">Since last week</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    {{#if success_messages}}
+    <div class="alert alert-success alert-dismissible fade show mt-2 auto-hide" role="alert">
+        <h2>{{success_messages}}</h2>
+        <button type="button" class="close" data-dismis="alert" aria-label="close">
+            <span aria-hidden="true">X</span>
+        </button>
+    </div>
+    {{/if}}
+    {{#if error_messages}}
+    <div class="alert alert-danger alert-dismissible fade show mt-2 auto-hide" role="alert">
+        <h2>{{error_messages}}</h2>
+        <button type="button" class="close" data-dismis="alert" aria-label="close">
+            <span aria-hidden="true">X</span>
+        </button>
+    </div>
+    {{/if}}
+
+
+</div>

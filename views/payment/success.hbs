@@ -1,0 +1,32 @@
+{{!-- <h1>you have successfully paid for the course {{payAmount}}</h1>
+<strong><p><a href="/student/studentRegistration" style="font-size: 20pt; font-family:Arial, Helvetica, sans-serif; color:orange">click here </a>to proceed with the registeration</p>
+</strong> --}}
+{{!-- 
+<div class="jumbotron text-xs-center">
+    <h1 class="display-4">Thank You!</h1>
+    <p class="lead"><strong>Please check your email</strong> for further instructions on how to complete your account
+        setup.</p>
+    <hr>
+    <p>
+        Having trouble? <a href="">Contact us</a>
+    </p>
+    <p class="lead">
+        <a class="btn btn-primary btn-sm" href="https://bootstrapcreative.com/" role="button">Continue with
+            registration</a>
+    </p>
+</div> --}}
+<header class="site-header" id="header">
+    <h3 class="site-header__title" data-lead-id="site-header-title">THANK YOU!!</h3><br>
+    <h4>{{payName}}</h4><br>
+    <h4>your payment of {{payAmount}} was successfully received</h4>
+</header>
+
+<div class="main-content">
+    <!-- <i class="fa fa-check main-content__checkmark" id="checkmark"></i> -->
+    <i class="fas fa-check"></i>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg BUTTON" href="/student/studentRegistration/{{id}}" role="button">Continue with
+            registration</a>
+    </p>
+
+</div>

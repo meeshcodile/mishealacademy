@@ -1,0 +1,79 @@
+<!-- Header -->
+<div class="header  pb-8 pt-5 pt-md-8" style="background: #f58634">
+    <div class="container-fluid">
+        <div class="header-body">
+
+            <div class="alert alert-secondary text-center">
+                <h1>Internship Applications</h1>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    {{#if success_messages}}
+    <div class="alert alert-success alert-dismissible fade show mt-2 auto-hide" role="alert">
+        <h2>{{success_messages}}</h2>
+        <button type="button" class="close" data-dismis="alert" aria-label="close">
+            <span aria-hidden="true">X</span>
+        </button>
+    </div>
+    {{/if}}
+    {{#if error_messages}}
+    <div class="alert alert-danger alert-dismissible fade show mt-2 auto-hide" role="alert">
+        <h2>{{error_messages}}</h2>
+        <button type="button" class="close" data-dismis="alert" aria-label="close">
+            <span aria-hidden="true">X</span>
+        </button>
+    </div>
+    {{/if}}
+</div>
+
+
+<div class="table-responsive">
+    <div class="container ">
+        <div class="alert alert-secondary text-center">
+            <h1>All Intern Application</h1>
+        </div>
+
+
+        <table class="table table-bordered table-responsive" style="margin-top:40px; ">
+            <thead class="bg-dark text-center">
+                <tr class="text-white">
+                    {{!-- <th>id</th> --}}
+                    <th>Date</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Application Letter</th>
+                    <th>Approved</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+
+
+                {{#each internsApplication}}
+                <tr>
+                    {{!-- <td>{{id}}</td> --}}
+                    <td>{{date}}</td>
+                    <td>{{fullName}}</td>
+                    <td>{{email}}</td>
+                    <td><a href="{{applicationLetter}}">View Letter</a></td>
+                    <td>{{isApproved}}</td>
+                    <td class="d-flex">
+                        <a href="/admin/approveInternApplication/{{_id}}"
+                            class="btn btn-sm btn-success mr-2">Approve</a>
+                        {{!-- <a href="/admin/delete/{{_id}}" class="btn btn-sm btn-danger mr-2">Delete</a> --}}
+
+                        <form action="/admin/deleteInternApplication/{{id}}?newMethod=DELETE" method="post">
+                            <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

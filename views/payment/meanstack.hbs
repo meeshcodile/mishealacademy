@@ -1,0 +1,30 @@
+<div class="login-page">
+    <div class="form">
+        <h3 style="text-align: center; padding:20px; font-size: 20pt;font-weight:bolder">Mean Stack <br>#60000
+        </h3>
+        <form class="login-form" name='myForm' action="/paystack/pay" method="POST">
+            <div class="form-wrapper">
+                <label for="">Full Name</label>
+                <input type="text" name="fullName" class="form-control">
+            </div>
+            {{!-- <div class="form-wrapper">
+                <label for="">Phone Number</label>
+                <input type="text" name="phoneNumber" class="form-control">
+            </div> --}}
+            <div class="form-wrapper">
+                <label for="">Email</label>
+                <input type="text" name="email" class="form-control">
+            </div>
+            <div class="form-wrapper">
+                <label for=""></label>
+                
+                <input type="hidden" name="amount" class="form-control" class="inputClass" value="60000">                
+                
+            </div>
+
+            <button class="bttn"> Pay</button>
+            
+
+        </form>
+    </div>
+</div>
